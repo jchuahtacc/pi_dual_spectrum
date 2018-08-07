@@ -21,7 +21,7 @@ def is_ntp_working():
     except:
         return False
 
-def get_suffix(outputdir,pattern='snapshot_*'):
+def get_suffix(outputdir,pattern):
     '''
     Get suffix for picture name
     '''

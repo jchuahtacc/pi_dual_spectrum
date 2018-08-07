@@ -13,8 +13,10 @@ def main():
     suffix_picamera = get_suffix(outputdir,'picamera')
     suffix_lepton = get_suffix(outputdir,'lepton')
 
-    take_screenshot('{}/picamera_{}.jpg'.format(outputdir,suffix_picamera))
-    capture_image('{}/lepton_{}.jpg'.format(outputdir,suffix_lepton))
+    resolution = (800, 600)
+
+    take_screenshot('{}/picamera_{}.jpg'.format(outputdir,suffix_picamera), resolution)
+    capture_image('{}/lepton_{}.jpg'.format(outputdir,suffix_lepton), resolution)
 
 
 if __name__ == '__main__':

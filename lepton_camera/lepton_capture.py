@@ -4,7 +4,7 @@ from PIL import Image
 from PIL import BICUBIC
 
 
-def capture_image(size, filename):
+def capture_image(filename, size):
     with Lepton() as l:
         a,_ = l.capture()
 

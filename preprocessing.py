@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from time import time
+from datetime import datetime
 from glob import glob
 import numpy as np
 from os.path import basename,splitext
@@ -26,10 +26,7 @@ def get_suffix(outputdir,pattern):
     Get suffix for picture name
     '''
     if is_ntp_working():
-        return time()
+        return datetime.now().strftime('%Y%m%d%H%M%S')
     else:
         files = glob('{}/{}'.format(outputdir,pattern))
         return np.max(list(map(get_file_number,files)))+1
-
-if __name__ == '__main__':
-    take_screenshot()

@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+from time import time
+
 from preprocessing import get_suffix
 
 from pi_camera.pi_capture import take_screenshot
@@ -11,8 +13,9 @@ def main():
     suffix_picamera = get_suffix(outputdir,'picamera')
     suffix_lepton = get_suffix(outputdir,'lepton')
 
-    take_screenshot('{}/picamera_{}'.format(outputdir,suffix_picamera))
-    capture_image('{}/lepton_{}'.format(outputdir,suffix_lepton))
+    take_screenshot('{}/picamera_{}.jpg'.format(outputdir,suffix_picamera))
+    capture_image('{}/lepton_{}.jpg'.format(outputdir,suffix_lepton))
+
 
 if __name__ == '__main__':
     main()

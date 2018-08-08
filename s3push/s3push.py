@@ -3,8 +3,6 @@ def s3_upload(filename):
 	import tinys3
 	import yaml
 
-	filename = "image.jpg"
-
 	with open("config.yml", 'r') as ymlfile:
     		config = yaml.load(ymlfile)
 

@@ -2,6 +2,8 @@
 
 from preprocessing import get_suffix
 
+from s3push.s3push import  s3_upload
+
 from pi_camera.pi_capture import take_screenshot
 # from lepton_camera.lepton_capture import capture_image
 
@@ -14,6 +16,8 @@ def main(resolution=None):
 
     take_screenshot(filename,resolution)
     # capture_image('{}/lepton_{}.jpg'.format(outputdir,suffix_lepton), resolution)
+
+    s3_upload(filename)
 
 if __name__ == '__main__':
     main()

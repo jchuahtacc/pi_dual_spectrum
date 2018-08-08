@@ -7,8 +7,8 @@ from s3push.s3push import  s3_upload
 from pi_camera.pi_capture import take_screenshot
 # from lepton_camera.lepton_capture import capture_image
 
-def main(resolution=None):
-    outputdir = './'
+def main(resolution=(1296, 972,)):
+    outputdir = 'img'
 
     suffix_picamera = get_suffix(outputdir,'picamera')
     # suffix_lepton = get_suffix(outputdir,'lepton')

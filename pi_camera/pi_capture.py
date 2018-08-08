@@ -8,4 +8,4 @@ def take_screenshot(filename,resolution):
 
     camera = picamera.PiCamera()
     camera.resolution = resolution
-    camera.capture('{}/{}'.format(filename))
+    camera.capture('{}'.format(filename))

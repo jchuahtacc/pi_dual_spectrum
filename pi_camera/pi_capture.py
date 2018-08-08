@@ -7,6 +7,9 @@ def take_screenshot(filename,resolution):
     '''
 
     camera = picamera.PiCamera()
-    camera.resolution = resolution
+
+    if resolution is not None:
+        camera.resolution = resolution
+
     camera.capture('{}'.format(filename))
     camera.close()

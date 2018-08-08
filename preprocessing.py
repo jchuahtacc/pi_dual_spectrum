@@ -29,4 +29,7 @@ def get_suffix(outputdir,pattern):
         return datetime.now().strftime('%Y%m%d%H%M%S')
     else:
         files = glob('{}/{}'.format(outputdir,pattern))
-        return np.max(list(map(get_file_number,files)))+1
+        if len(files)>0:
+            return np.max(list(map(get_file_number,files)))+1
+        else:
+            return 0
